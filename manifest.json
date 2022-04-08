@@ -1,0 +1,42 @@
+{
+    "name": "Radial Menu",
+    "description": "A radial menu for a more convenient and efficient use of your browser",
+    "version": "1.0",
+    "manifest_version": 3,
+    "content_scripts": [
+      {
+        "matches": ["https://*/*", "http://*/*"],
+        "all_frames": true,
+        "js": [
+          "src/index.js", 
+          "src/lib/fabric.js", 
+          "src/ui/controls.js", 
+          "src/ui/radial-menu.js", 
+          "src/functions/screencap.js", 
+          "src/data/config.js", 
+          "src/data/variables.js", 
+          "src/functions/mute-tab.js", 
+          "src/functions/tab-navigator.js"]
+      }
+    ],
+    "background": {
+      "service_worker": "src/functions/background.js"
+    },
+    "permissions": ["storage", "activeTab", "scripting", "tabs", "bookmarks", "downloads"],
+    "action": {
+      "default_popup": "popup/popup.html",
+      "default_icon": {
+        "16": "icons/get_started16.png",
+        "32": "icons/get_started32.png",
+        "48": "icons/get_started48.png",
+        "128": "icons/get_started128.png"
+      }        
+    },
+    "options_page": "options/options.html",
+    "web_accessible_resources": [{
+      "resources": ["assets/radial-menu.html", "assets/custom_radial_menu.html"],
+      "matches": ["<all_urls>"]
+    }],
+
+    "host_permissions": ["<all_urls>"]
+}
