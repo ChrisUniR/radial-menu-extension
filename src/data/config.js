@@ -13,27 +13,28 @@ const config = {
 }
 
 const configFunctions = {
+
     //inner ring
-    FUNCTION_0 : "new_tab",
-    FUNCTION_1 : "go_forward",
+    FUNCTION_0 : "toggle_mute_state",
+    FUNCTION_1 : "to_right_tab",
     FUNCTION_2 : "close_tab",
-    FUNCTION_3 : "go_back",
+    FUNCTION_3 : "to_left_tab",
 
     //outer ring
     FUNCTION_4 : "add_bookmark",
-    FUNCTION_5 : "custom_screencap",
-    FUNCTION_6 : "",
+    FUNCTION_5 : "refresh",
+    FUNCTION_6 : "color_picker",
 
-    FUNCTION_7 : "",
-    FUNCTION_8 : "",
-    FUNCTION_9 : "",
+    FUNCTION_7 : "screenshot",
+    FUNCTION_8 : "go_forward",
+    FUNCTION_9 : "bookmark_4",
 
-    FUNCTION_10 : "",
-    FUNCTION_11 : "",
-    FUNCTION_12 : "",
+    FUNCTION_10 : "bookmark_3",
+    FUNCTION_11 : "minimize",
+    FUNCTION_12 : "bookmark_2",
 
-    FUNCTION_13 : "",
-    FUNCTION_14 : "",
-    FUNCTION_15 : "",
+    FUNCTION_13 : "bookmark_1",
+    FUNCTION_14 : "go_back",
+    FUNCTION_15 : "toggle_mute_state",
 }
 

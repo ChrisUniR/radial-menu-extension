@@ -12,7 +12,7 @@
           "src/lib/fabric.js", 
           "src/ui/controls.js", 
           "src/ui/radial-menu.js", 
-          "src/functions/screencap.js", 
+          "src/functions/screenshot.js", 
           "src/data/config.js", 
           "src/data/variables.js", 
           "src/functions/mute-tab.js", 
