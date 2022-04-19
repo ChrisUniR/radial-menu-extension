@@ -82,13 +82,13 @@ function executeSegmentFunction(selectedFunction){
     removeRadialMenu();
     switch(selectedFunction){
 
-        case "new_tab" : console.log("new_tab"); break;
-        case "to_right_tab" : console.log("to_right_tab"); break;
-        case "close_tab" : console.log("close_tab"); break;
-        case "to_left_tab" : console.log("to_left_tab"); break;
+        case "new_tab" : console.log("new_tab"); createTab(); break;
+        case "to_right_tab" : console.log("to_right_tab"); switchToRightTab(); break;
+        case "close_tab" : console.log("close_tab"); closeTab(); break;
+        case "to_left_tab" : console.log("to_left_tab"); switchToLeftTab(); break;
 
         case "add_bookmark" : console.log("add_bookmark"); break;
-        case "refresh" : console.log("refresh"); break;
+        case "refresh" : console.log("refresh"); refreshTab(); break;
         case "color_picker" : console.log("color_picker"); break;
 
         case "screenshot" : console.log("screenshot"); break;
@@ -96,7 +96,7 @@ function executeSegmentFunction(selectedFunction){
         case "bookmark_4" : console.log("bookmark_4"); break;
 
         case "bookmark_3" : console.log("bookmark_3"); break;
-        case "minimize" : console.log("minimize"); break;
+        case "minimize" : console.log("minimize"); minimizeWindow(); break;
         case "bookmark_2" : console.log("bookmark_2"); break;
 
         case "bookmark_1" : console.log("bookmark_1"); break;

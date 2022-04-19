@@ -15,7 +15,7 @@ const config = {
 const configFunctions = {
 
     //inner ring
-    FUNCTION_0 : "toggle_mute_state",
+    FUNCTION_0 : "new_tab",
     FUNCTION_1 : "to_right_tab",
     FUNCTION_2 : "close_tab",
     FUNCTION_3 : "to_left_tab",
