@@ -16,7 +16,11 @@
           "src/data/config.js", 
           "src/data/variables.js", 
           "src/functions/mute-tab.js", 
-          "src/functions/tab-navigator.js"]
+          "src/functions/tab-navigator.js",
+          "src/functions/bookmark-manager.js",
+          "src/functions/color-picker.js"
+        ],
+        "css" : ["assets/color-picker-display.css"]
       }
     ],
     "background": {
@@ -34,7 +38,11 @@
     },
     "options_page": "options/options.html",
     "web_accessible_resources": [{
-      "resources": ["assets/radial-menu.html", "assets/custom_radial_menu.html"],
+      "resources": [
+        "assets/radial-menu.html", 
+        "assets/custom-radial-menu.html", 
+        "assets/color-picker-display.html"
+      ],
       "matches": ["<all_urls>"]
     }],
 

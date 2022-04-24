@@ -1,10 +1,10 @@
 //radial-menu
 
 let radialMenuContainer,
-xPos,
+xPos, //to index
 yPos,
-xRMCenter = xPos-250,
-yRMCenter = yPos-250;
+xRMOrigin = xPos-250,
+yRMOrigin = yPos-250;
 
 function loadMenu(){
     fetch(chrome.runtime.getURL('assets/radial-menu.html')).then(r => r.text()).then(r => initMenu(r));
@@ -17,16 +17,16 @@ function initMenu(r){
     radialMenuContainer = document.createElement("div");
     radialMenuContainer.innerHTML = r;
   
-    xRMCenter = xPos - (config.RADIAL_MENU_SIZE/2);
-    yRMCenter = yPos - (config.RADIAL_MENU_SIZE/2);
+    xRMOrigin = xPos - (config.RADIAL_MENU_SIZE/2);
+    yRMOrigin = yPos - (config.RADIAL_MENU_SIZE/2);
   
     radialMenuContainer.style.width = config.RADIAL_MENU_SIZE + "px";
     radialMenuContainer.style.height = config.RADIAL_MENU_SIZE + "px";
-    radialMenuContainer.id = "radial-menu-container";
     radialMenuContainer.style.position = "absolute";
-    radialMenuContainer.style.left = xRMCenter + "px";
-    radialMenuContainer.style.top = yRMCenter + "px";
+    radialMenuContainer.style.left = xRMOrigin + "px";
+    radialMenuContainer.style.top = yRMOrigin + "px";
     radialMenuContainer.style.zIndex = "999";
+    radialMenuContainer.id = "radial-menu-container";
   
     body.appendChild(radialMenuContainer);
   
@@ -87,20 +87,20 @@ function executeSegmentFunction(selectedFunction){
         case "close_tab" : console.log("close_tab"); closeTab(); break;
         case "to_left_tab" : console.log("to_left_tab"); switchToLeftTab(); break;
 
-        case "add_bookmark" : console.log("add_bookmark"); break;
+        case "toggle_bookmark" : console.log("toggle_bookmark"); toggleBookmark(); break;
         case "refresh" : console.log("refresh"); refreshTab(); break;
-        case "color_picker" : console.log("color_picker"); break;
+        case "color_picker" : console.log("color_picker"); pickPixelColor(); break;
 
         case "screenshot" : console.log("screenshot"); break;
-        case "go_forward" : console.log("go_forward"); break;
+        case "go_forward" : console.log("go_forward"); goForward(); break;
         case "bookmark_4" : console.log("bookmark_4"); break;
 
         case "bookmark_3" : console.log("bookmark_3"); break;
         case "minimize" : console.log("minimize"); minimizeWindow(); break;
-        case "bookmark_2" : console.log("bookmark_2"); break;
+        case "bookmark_2" : console.log("bookmark_2"); openRMBookmark("bookmark_1"); break;
 
-        case "bookmark_1" : console.log("bookmark_1"); break;
-        case "go_back" : console.log("go_back"); break;
+        case "bookmark_1" : console.log("bookmark_1"); setRMBookmark(selectedFunction); break;
+        case "go_back" : console.log("go_back"); goBack(); break;
         case "toggle_mute_state" : console.log("toggle_mute_state"); toggleMuteState(); break;
 
         default : console.log("default");
@@ -117,6 +117,3 @@ new ClickAndHold(clickHoldArea, () => {});
   radialMenu = document.getElementById("radial-menu");
   radialMenuContainer.appendChild(radialMenu);
 */
-
-
-

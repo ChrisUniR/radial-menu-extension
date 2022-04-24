@@ -1,0 +1,125 @@
+#color-picker-display-container {
+    width: 250px;
+    height: 50px;
+    outline: none;
+    border: none;
+    left: 50;
+    top: 50;
+    border-radius: 2px;
+    background-color: rgb(30, 30, 30);
+    width: 250px;
+    height:  80px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    display: flex;
+    position: absolute;
+    z-index: "999";
+    border: 1px solid white;
+}
+  
+.cp-current-color{
+    position: relative;
+    background-color: black;
+    margin: 5px;
+    width: 70px;
+    border: 1px solid white;
+}
+  
+.cp-rgb-values-container{
+    position: relative;
+  
+    width: 30px;
+    display: grid;
+    overflow: hidden;
+    grid-template-rows: repeat(3);
+    margin: 5px;
+    margin-left: 0;
+    margin-right: 0;
+    align-content: space-between;
+  }
+  
+.cp-rgb-value{
+    position: relative;
+    background-color: rgb(75, 75, 75);
+    width: 100%;
+    height: 20px;  
+}
+  
+.cp-rgb-bar{
+    position: relative;
+    flex-grow: 1;
+    display: grid;
+    overflow: hidden;
+    grid-template-rows: repeat(3);
+    margin: 5px;
+    margin-left: 0;
+    align-content: space-between;
+}
+  
+.cp-container-r{
+    position: relative;
+    width: 100%;
+    height: 20px;  
+}
+  
+.cp-bar-r{
+    position: relative;
+    background-color: rgb(255, 0, 0);
+    width: 100%;
+    height: 20px;
+    float: left;
+}
+  
+.cp-bar-r-max{
+    background-color: rgb(75, 75, 75);
+    width: 100%;
+    height: 20px;
+}
+  
+.cp-container-g{
+    position: relative;
+    width: 100%;
+    height: 20px;  
+}
+  
+.cp-bar-g{
+    position: relative;
+    background-color: rgb(0, 255, 0);
+    width: 100%;
+    height: 20px;
+    float: left;
+}
+  
+.cp-bar-g-max{
+    background-color: rgb(75, 75, 75);
+    width: 100%;
+    height: 20px;
+}
+  
+.cp-container-b{
+     position: relative;
+    width: 100%;
+    height: 20px;  
+}
+  
+.cp-bar-b{
+    position: relative;
+    background-color: rgb(0, 0, 255);
+    width: 100%;
+    height: 20px;
+    float: left;
+}
+  
+.cp-bar-b-max{
+    background-color: rgb(75, 75, 75);
+    width: 100%;
+    height: 20px;
+}
+  
+.center {
+    color: white;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    text-align: center;
+}
+  
+  
+  

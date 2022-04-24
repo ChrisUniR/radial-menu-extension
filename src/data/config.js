@@ -4,7 +4,9 @@ const config = {
     RADIAL_MENU_SIZE : 500,
     RM_CLICK_HOLD_INTERVAL : 100,
     CONTROL_MODE : "release",
+}
 
+let configRMBookmarks = {
     BOOKMARK_1 : undefined,
     BOOKMARK_2 : undefined,
     BOOKMARK_3 : undefined,
@@ -15,13 +17,13 @@ const config = {
 const configFunctions = {
 
     //inner ring
-    FUNCTION_0 : "new_tab",
+    FUNCTION_0 : "color_picker",//"new_tab",
     FUNCTION_1 : "to_right_tab",
     FUNCTION_2 : "close_tab",
     FUNCTION_3 : "to_left_tab",
 
     //outer ring
-    FUNCTION_4 : "add_bookmark",
+    FUNCTION_4 : "toggle_bookmark",
     FUNCTION_5 : "refresh",
     FUNCTION_6 : "color_picker",
 
@@ -37,4 +39,3 @@ const configFunctions = {
     FUNCTION_14 : "go_back",
     FUNCTION_15 : "toggle_mute_state",
 }
-

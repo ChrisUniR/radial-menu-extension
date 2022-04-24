@@ -6,8 +6,6 @@ let hideContextMenu = false;
 let contextMenuEvent;
 let clickHoldArea = document.body;
 
-
-
 //INIT WINDOW LISTENERS
 
 //window.addEventListener("mousedown", onMouseDown);
@@ -62,5 +60,3 @@ function removeRadialMenu(){
 function seg2Selected(){
   console.log("SEG 2 SELECTED");
 }
-
-
